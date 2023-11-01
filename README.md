@@ -8,4 +8,11 @@ Using Hugging Face Transformers and Pytorch
 python -m venv venv
 ```
 ## Then activate the venv and install requirements
+for windows users
+```
+venv\Scripts\activate
+```
 ## Run the uvicorn server
+```
+uvicorn main:app --reload
+```
