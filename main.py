@@ -1,5 +1,6 @@
 from fastapi import FastAPI, Form
 from ai import get_bot_answer  # importing ai blenderbot
+from bot import route
 
 
 app = FastAPI()
@@ -10,6 +11,8 @@ async def talk(text: str = Form(...)):
     answer = await get_bot_answer(text)
     return answer
 
+
+app.include_router(route.router)
 
 # main function
 if __name__ == "__main__":
