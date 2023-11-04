@@ -8,7 +8,7 @@ app = FastAPI()
 
 @app.post("/chat")
 async def talk(text: str = Form(...)):
-    answer = await get_bot_answer(text)
+    answer = get_bot_answer(text)
     return answer
 
 

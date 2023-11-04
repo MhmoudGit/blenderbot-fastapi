@@ -16,7 +16,7 @@ tokenizer: Any = AutoTokenizer.from_pretrained(model_name)
 model: tuple = AutoModelForSeq2SeqLM.from_pretrained(model_name)
 
 
-async def get_bot_answer(input: str) -> Any:
+def get_bot_answer(input: str) -> Any:
     # utterance is the input that the chatbot take
     UTTERANCE = input
     # tokenize the utterance(user input)
